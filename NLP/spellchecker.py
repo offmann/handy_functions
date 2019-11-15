@@ -2,12 +2,14 @@
 
 from spellchecker import SpellChecker
 
-def check_spell(phrase, language):
+def spell_check(sent, language):
+  
   spell = SpellChecker(language=language)
 
-  phrase = phrase.split()
+  sent = sent.split()
+  
   # find those words that may be misspelled
-  misspelled = spell.unknown(phrase)
+  misspelled = spell.unknown(sent)
 
   most_likely = dict() 
   candidats = dict()
@@ -20,6 +22,6 @@ def check_spell(phrase, language):
       candidats[word] = spell.candidates(word)
 
 
-  return (("les erreurs dans la phrase sont : {} ".format(misspelled)),
-          ("les corrections les plus proches sont : {}".format(most_likely)),
-          ("les candidats les plus proches sont : {}".format(candidats)))
+  return (("The errors in the sentence are : {} ".format(misspelled)),
+          ("The most likely answers : {}".format(most_likely)),
+          ("The other likely options  : {}".format(candidats)))
