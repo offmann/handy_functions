@@ -20,5 +20,5 @@ def coloc_3(s):
     
 
 # Calling
-data['coloc_2'] = data['text_column'].map(lambda phrase: coloc_2(phrase))
-data['coloc_3'] = data['text_column'].map(lambda phrase: coloc_3(phrase))
+data['coloc_2'] = data['text_column'].map(lambda sentence: coloc_2(sentence))
+data['coloc_3'] = data['text_column'].map(lambda sentence: coloc_3(sentence))
