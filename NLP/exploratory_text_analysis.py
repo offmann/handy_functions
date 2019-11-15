@@ -4,10 +4,8 @@ def eda(df, column, nb_words_display, max_words=100, min_words=20, max_min_freq=
     
     '''
     Goal : Apply this function on a column containing text in order to explore the data, the words, nb of occurences
-    
     '''
     
-       
     # number of words in each observation
     df['nb_words'] = df[column].map(lambda sentence: len(sentence.split()))
     print(df['nb_words'].describe())
