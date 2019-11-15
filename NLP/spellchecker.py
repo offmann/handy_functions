@@ -23,5 +23,5 @@ def spell_check(sent, language):
 
 
   return (("The errors in the sentence are : {} ".format(misspelled)),
-          ("The most likely answers : {}".format(most_likely)),
+          ("The most likely answer : {}".format(most_likely)),
           ("The other likely options  : {}".format(candidats)))
